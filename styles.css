@@ -1,0 +1,145 @@
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+@font-face {
+    font-family: 'Overpass';
+    src: url(font/Overpass-VariableFont_wght.ttf), url(font/Overpass-Italic-VariableFont_wght.ttf);
+}
+body {
+    
+    background-color: var(--Very-Dark-Blue);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    flex-direction: column;
+}
+/* Rating state start */
+#rating {
+    max-width: 352px;
+    width: 90%;
+    background-color: hsl(218, 22%, 15%);
+    padding: 50px;
+    color: var(--White);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#rating h1 {
+    font-size: 28px;
+}
+#rating p {
+    font-size: 15px;
+    width: 340px;
+    color: var(--Light-Grey);
+}
+.star{
+    background-color: var(--Dark-Blue);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.group {
+    width: 341px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.score{
+    background-color: var(--Dark-Blue);
+    border: none;
+    border-radius: 50%;
+   width: 51px;
+   height: 51px;
+   color: var(--Light-Grey);
+}
+.score:hover {
+color: var(--Dark-Blue);
+background-color: var(--Orange);
+}
+.score:focus {
+    color: var(--Dark-Blue);
+    background-color: var(--White);
+}
+.submit {
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 22.5px;
+    width: 341px;
+    margin-top: 40px;
+    padding: 10px;
+    color: var(--Very-Dark-Blue); 
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.submit:hover {
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+}
+/* Rating state end */
+/* Thank you state start */
+.thank-you{
+    max-width: 352px;
+    width: 90%;
+    background-color: hsl(218, 22%, 15%);
+    padding: 50px;
+    color: var(--White);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+dialog{
+    display: none;
+    background-color: var(--Very-Dark-Blue);
+    width: 100vw;
+    height: 100vh;
+    
+    
+}
+dialog[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#thank-you img{
+    width: 162px;
+    height: 108px;
+    margin-bottom: 20px;
+}
+#selected {
+    width: 193px;
+    border-radius: 22.5px;
+    text-align: center;
+    background-color: var(--Dark-Blue);
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--Orange);
+    padding: 10px;
+}
+#thanks {
+    font-size: 28px;
+    font-weight: bold;
+   
+}
+.text {
+    font-size: 15px;
+    color: var(--Light-Grey);
+    text-align: center;
+    width: 340px;
+    line-height: 24px;
+}
+/* Thank you state end */
