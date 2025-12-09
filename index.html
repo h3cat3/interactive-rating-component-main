@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="styles.css" rel="stylesheet">
@@ -44,42 +44,9 @@
    </dialog> 
 
   <!-- Thank you state end -->
-<script>
-  const dialog = document.getElementById('thank-you');
-  const openButton = document.getElementById('open-modal');
-  const scores = document.querySelectorAll('.score');
-  const selectedScore = document.getElementById('selected');
 
-  let scoreValue = 0;
-
-  scores.forEach(scores => {
-    scores.addEventListener('click', (event) => {
-      scoreValue = event.target.innerText;
-      selectedScore.innerText = `You selected ${scoreValue} out of 5`;
-      
- 
-        scores.forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
-    });
-  });
-
-
-  openButton.addEventListener('click', () => {
-    if (scoreValue !== 0) {
-      dialog.showModal();
-    } else {
-      alert('Please select a score befor submitting.');
-    }
-  });
-
-window.addEventListener('click', (event) => {
-    if (event.target === dialog) {
-        dialog.close();
-    }
-});
-  
+<script defer src="script.js" >  
 </script>
-  
-  
+    
 </body>
 </html>
